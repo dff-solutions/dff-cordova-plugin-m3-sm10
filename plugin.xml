@@ -27,8 +27,11 @@
         
         <source-file src="lib/m3sdk.jar" target-dir="libs" />
         
-        <source-file src="src/android/com/dff/cordova/plugin/m3/sm10/M3BarcodeListener.java" target-dir="src/com/dff/cordova/plugin/m3/sm10" />
+		<source-file src="src/android/com/dff/cordova/plugin/m3/sm10/action/ScanDispose.java" target-dir="src/com/dff/cordova/plugin/m3/sm10/action" />
+		<source-file src="src/android/com/dff/cordova/plugin/m3/sm10/action/M3Action.java" target-dir="src/com/dff/cordova/plugin/m3/sm10/action" />
+		<source-file src="src/android/com/dff/cordova/plugin/m3/sm10/action/ScanStart.java" target-dir="src/com/dff/cordova/plugin/m3/sm10/action" />
 		<source-file src="src/android/com/dff/cordova/plugin/m3/sm10/M3SM10Plugin.java" target-dir="src/com/dff/cordova/plugin/m3/sm10" />
+		<source-file src="src/android/com/dff/cordova/plugin/m3/sm10/M3BarcodeListener.java" target-dir="src/com/dff/cordova/plugin/m3/sm10" />
      </platform>
 </plugin>
 
