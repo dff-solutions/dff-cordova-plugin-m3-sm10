@@ -131,6 +131,7 @@ public class M3SM10Plugin extends CommonPlugin {
 
 		if (cordovaAction != null) {
 			super.actionHandler.post(cordovaAction);
+			return true;
 		}
 
 		return super.execute(action, args, callbackContext);
