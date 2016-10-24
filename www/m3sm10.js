@@ -9,9 +9,15 @@
 
 var cordova = require('cordova');
 var feature = "M3SM10";
-var self = {};
 
-var actions = ["onLog", "onBarcode"];
+function M3SM10() {};
+
+var actions = [
+    "onLog",
+    "onBarcode",
+    "scanStart",
+    "scanDispose"
+];
 
 function createActionFunction (action) {
     return function (success, error, args) {
@@ -20,7 +26,7 @@ function createActionFunction (action) {
 }
 
 actions.forEach(function (action) {
-    self[action] = createActionFunction(action);
+    M3SM10.prototype[action] = createActionFunction(action);
 });
 
-module.exports = self;
+module.exports = new M3SM10();
