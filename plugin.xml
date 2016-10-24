@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" 
-    id="com.dff.cordova.plugins.m3.sm10"
-    version="0.0.1">
+    id="dff-cordova-plugin-m3-sm10"
+    version="0.0.2">
 
     <name>M3SM10</name>
     <description>M3SM10 Plugin</description>
