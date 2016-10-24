@@ -21,7 +21,7 @@ import com.m3.sdk.scannerlib.BarcodeManager;
 public class M3SM10Plugin extends CommonPlugin {
 	public static final String TAG = "com.dff.cordova.plugin.m3.sm10.M3SM10Plugin";
 
-	private HashMap<String, Class<? extends M3Action>> actions = new HashMap<>();
+	private HashMap<String, Class<? extends M3Action>> actions = new HashMap<String, Class<? extends M3Action>>();
 
 	private Barcode mBarcode = null;
 	private M3BarcodeListener mListener = null;
