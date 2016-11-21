@@ -130,7 +130,7 @@ public class M3SM10Plugin extends CommonPlugin {
 		}
 
 		if (cordovaAction != null) {
-			super.actionHandler.post(cordovaAction);
+			this.cordova.getThreadPool().execute(cordovaAction);
 			return true;
 		}
 
