@@ -65,3 +65,6 @@ M3 Mobile SM10 SDK cordova plugin
         console.error(reason);
     });
 ```
+
+## Documentation
+- <a href="https://dff-solutions.github.io/dff-cordova-plugin-m3-sm10/" target="_blank" >JAVA DOC</a>
