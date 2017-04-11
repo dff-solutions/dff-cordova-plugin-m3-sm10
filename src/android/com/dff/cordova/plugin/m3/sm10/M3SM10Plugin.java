@@ -1,7 +1,6 @@
 package com.dff.cordova.plugin.m3.sm10;
 
 import android.Manifest;
-import android.content.pm.PackageManager;
 import com.dff.cordova.plugin.common.CommonPlugin;
 import com.dff.cordova.plugin.common.action.CordovaAction;
 import com.dff.cordova.plugin.common.log.CordovaPluginLog;
@@ -23,7 +22,6 @@ public class M3SM10Plugin extends CommonPlugin {
 
     public static final String TAG = "com.dff.cordova.plugin.m3.sm10.M3SM10Plugin";
     private static final String PERMISSION = Manifest.permission.WRITE_SETTINGS;
-    private static final int PERMISSION_CODE = 0;
 
     private HashMap<String, Class<? extends M3Action>> actions = new HashMap<String, Class<? extends M3Action>>();
 
@@ -33,31 +31,13 @@ public class M3SM10Plugin extends CommonPlugin {
 
     public M3SM10Plugin() {
         super(TAG);
-
         this.actions.put(ScanDispose.ACTION_NAME, ScanDispose.class);
         this.actions.put(ScanStart.ACTION_NAME, ScanStart.class);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (!cordova.hasPermission(PERMISSION)) {
-            getReadAndWritePermission(PERMISSION_CODE);
-        }
-    }
 
-    private void getReadAndWritePermission(int requestCode) {
-        cordova.requestPermission(this, requestCode, PERMISSION);
-    }
-
-    public void onRequestPermissionResult(int requestCode, String[] permissions,
-                                          int[] grantResults) throws JSONException {
-        for (int r : grantResults) {
-            if (r == PackageManager.PERMISSION_DENIED) {
-                CordovaPluginLog.e(TAG, "WRITE SETTINGS - PERMISSIONS DENIED");
-                return;
-            }
-        }
+    private void requestPermission() {
+        CommonPlugin.addPermission(PERMISSION);
     }
 
     /**
@@ -66,7 +46,7 @@ public class M3SM10Plugin extends CommonPlugin {
     @Override
     public void pluginInitialize() {
         super.pluginInitialize();
-
+        requestPermission();
         this.mBarcode = new Barcode(this.cordova.getActivity());
         this.mManager = new BarcodeManager(this.cordova.getActivity());
         this.mBarcode.setScanner(true);
