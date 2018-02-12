@@ -1,0 +1,33 @@
+{
+  "name": "dff-cordova-plugin-m3-sm10",
+  "version": "1.0.0",
+  "description": "dff-cordova-plugin-m3-sm10",
+  "main": "\"\"",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dff-solutions/dff-cordova-plugin-m3-sm10.git"
+  },
+  "keywords": [
+    "dff",
+    "cordova",
+    "android",
+    "plugin",
+    "m3",
+    "sm10",
+    "scanner",
+  ],
+  "author": "frankkoenigstein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dff-solutions/dff-cordova-plugin-m3-sm10/issues"
+  },
+  "homepage": "https://github.com/dff-solutions/dff-cordova-plugin-m3-sm10#readme"
+}
